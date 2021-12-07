@@ -18,7 +18,6 @@ function App() {
       .then(response => {
         setLeffat(response.data)
         setIsLoaded(true)
-        console.log(response.data)
       })
       .catch(error => {
         alert(error)
@@ -33,7 +32,6 @@ function App() {
       .then(response => {
         setLyhyet(response.data)
         setIsLoaded1(true)
-        console.log(response.data)
       })
       .catch(error => {
         alert(error)
@@ -51,8 +49,8 @@ function App() {
           <br />
           <ol>
             {isLoaded === false ? (
-              <div class="spinner-border text-info" role="status">
-                <span class="visually-hidden">Loading...</span>
+              <div className="spinner-border text-info" role="status">
+                <span className="visually-hidden">Loading...</span>
               </div>
             ) : (
               (leffat?.map(leffa => (
@@ -71,8 +69,8 @@ function App() {
           <br />
           <ol>
             {isLoaded1 === false ? (
-              <div class="spinner-border text-info" role="status">
-                <span class="visually-hidden">Loading...</span>
+              <div className="spinner-border text-info" role="status">
+                <span className="visually-hidden">Loading...</span>
               </div>
             ) : (
               (lyhyet?.map(lyhyt => (
